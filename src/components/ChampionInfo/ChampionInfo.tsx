@@ -159,6 +159,7 @@ const ChampionInfo = () => {
           ></S.Skin>
         ))}
       </S.SkinContainer>
+      <S.BottomPage></S.BottomPage>
     </S.Background>
   );
 };

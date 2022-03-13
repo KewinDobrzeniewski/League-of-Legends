@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Columns = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Container = styled.div`
   padding: 10px;
   margin: 20px;
@@ -10,16 +18,17 @@ export const Container = styled.div`
   border-style: groove;
   border-radius: 20px;
   border-width: 8px;
-  border-color: #a38f1d;
-  background-color: #0a3057;
+  border-color: #dbc557;
+  background-color: #153045;
 `;
 
 export const Tags = styled.div`
   display: flex;
   font-size: 20px;
-  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
-  margin: 6px;
+  color: #17bfbf;
+  padding: 8px;
   justify-content: space-between 10px;
   flex-direction: row;
   align-items: center;
@@ -42,9 +51,10 @@ export const ImgContainer = styled.img`
 `;
 
 export const Text = styled.div`
-  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 22px;
   display: flex;
+  color: white;
   align-content: center;
   justify-content: center;
   margin: 10px;
@@ -58,7 +68,8 @@ export const ButtonContainer = styled.div`
 
 export const Name = styled.div`
   font-size: 30px;
-  font-style: oblique;
+  font-style: italic;
+  color: #dbc557;
   display: flex;
   align-content: center;
   justify-content: center;

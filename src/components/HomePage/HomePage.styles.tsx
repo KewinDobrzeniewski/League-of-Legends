@@ -3,18 +3,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  background-color: #0e3b68;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  background-color: #153045;
 `;
 
 export const Logo = styled.img`
-  height: 500px;
-  width: 1000px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 770px;
+  height: 200px;
+  width: 600px;
+  margin: 50px;
 `;
 
 export const Ranks = styled.img`
@@ -30,7 +28,25 @@ export const Tags = styled.div`
   margin-left: 1020px;
   margin-top: 100px;
 `;
+export const CarouselContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #153045;
+  width: 100%;
+  height: 860px;
+`;
 
 export const NextSlide = styled.div`
-  margin-left: 1200px;
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  width: 20px;
+`;
+
+export const BottomPage = styled.div`
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: black;
+  color: black;
 `;

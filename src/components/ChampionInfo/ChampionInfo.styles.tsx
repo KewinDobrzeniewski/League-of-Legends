@@ -10,8 +10,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #0a3057;
+  background-color: #153045;
   justify-content: center;
+  justify-content: space-evenly;
 `;
 export const SkinContainer = styled.div`
   padding: 10px;
@@ -20,7 +21,7 @@ export const SkinContainer = styled.div`
   height: 240px;
   border-color: #dbc557;
   border-style: groove;
-  background-color: #0e3b68;
+  background-color: #153045;
   display: flex;
 `;
 
@@ -33,7 +34,7 @@ export const SpellContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-direction: row;
-  background-color: #0e3b68;
+  background-color: #153545;
   flex-wrap: wrap;
 `;
 
@@ -45,7 +46,7 @@ export const SpotlightContainer = styled.div`
   border-style: groove;
   display: flex;
   align-items: center;
-  background-color: #0e3b68;
+  background-color: #153545;
 `;
 
 export const Image = styled.img`
@@ -61,7 +62,7 @@ export const Stats = styled.div`
   border: 4px;
   padding: 20px;
   width: 200px;
-  background-color: #0e3b68;
+  background-color: #153545;
   border-color: #dbc557;
   border-style: groove;
   display: flex;
@@ -70,15 +71,16 @@ export const Stats = styled.div`
 `;
 
 export const Text = styled.div`
-  color: black;
+  color: white;
   font-size: 28px;
+  font-family: "Poor Story", cursive;
   margin: 14px;
   border-radius: 8px;
   border: 4px;
   padding: 20px;
   width: 320px;
   height: 100%;
-  background-color: #0e3b68;
+  background-color: #153545;
   border-color: #a38f1d;
   border-style: groove;
   display: flex;
@@ -160,4 +162,12 @@ export const ChampionTooltip = styled(({ className, ...props }) => (
   & .MuiTooltip-tooltip {
     font-size: 16px;
   }
+`;
+
+export const BottomPage = styled.div`
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: black;
+  color: black;
 `;

@@ -13,6 +13,8 @@ const NavigationBar = () => {
           <S.NavBarLinkContainer>
             <S.NavbarLink to={"/"}>Home</S.NavbarLink>
             <S.NavbarLink to={"/Champions"}>Champions</S.NavbarLink>
+            <S.NavbarLink to={"/News"}>News</S.NavbarLink>
+            <S.NavbarLink to={"/News"}>Patch Notes</S.NavbarLink>
             <S.OpenLinksButton
               onClick={() => {
                 setExtendedNavBar((curr) => !curr);

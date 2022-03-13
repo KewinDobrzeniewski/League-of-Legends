@@ -12,25 +12,27 @@ const CharacterCard = ({
 }: T.CharacterCard) => {
   const navigate = useNavigate();
   return (
-    <S.Container>
-      <S.Name>{name}</S.Name>
-      <S.Tags>
-        {tags.map((spec) => (
-          <S.Tags>{spec}</S.Tags>
-        ))}
-      </S.Tags>
-      <S.ButtonContainer
-        onClick={() => {
-          navigate(id);
-        }}
-      >
-        <S.ImgContainer
-          src={`http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/${image.full}`}
-        />
-      </S.ButtonContainer>
-      <S.Text>{title}</S.Text>
-      <S.Text>{blurb}</S.Text>
-    </S.Container>
+    <S.Columns>
+      <S.Container>
+        <S.Tags>
+          {tags.map((spec) => (
+            <S.Tags>{spec}</S.Tags>
+          ))}
+        </S.Tags>
+        <S.Name>{name}</S.Name>
+        <S.ButtonContainer
+          onClick={() => {
+            navigate(id);
+          }}
+        >
+          <S.ImgContainer
+            src={`http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/${image.full}`}
+          />
+        </S.ButtonContainer>
+        <S.Name>{title}</S.Name>
+        <S.Text>{blurb}</S.Text>
+      </S.Container>
+    </S.Columns>
   );
 };
 

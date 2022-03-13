@@ -6,6 +6,18 @@ import * as S from "./AllChampions.styles";
 
 const AllChampions = () => {
   const [characters, setCharacters] = useState<T.ChampionInfo[]>([]);
+  const [input, setInput] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setInput(e.target.value);
+  };
+
+  if (input.length > 0) {
+    characters.filter((i) => {
+      return i.name.match(input);
+    });
+  }
 
   useEffect(() => {
     axios
@@ -19,9 +31,18 @@ const AllChampions = () => {
 
   return (
     <S.Container>
-      {characters.map((details) => (
-        <CharacterCard {...details} />
-      ))}
+      <S.InputContainer
+        type={""}
+        placeholder={"Search Bar"}
+        onChange={handleChange}
+        value={input}
+      ></S.InputContainer>
+      <S.ChampionContainer>
+        {characters.map((details) => (
+          <CharacterCard {...details} />
+        ))}
+      </S.ChampionContainer>
+      <S.BottomPage></S.BottomPage>
     </S.Container>
   );
 };

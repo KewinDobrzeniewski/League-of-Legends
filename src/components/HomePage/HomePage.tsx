@@ -18,16 +18,15 @@ const HomePage = () => {
           "https://www.leagueoflegends.com/static/logo-1200-589b3ef693ce8a750fa4b4704f1e61f2.png"
         }
       ></S.Logo>
-
-      <CarouselProvider
-        visibleSlides={3}
-        totalSlides={4}
-        step={3}
-        naturalSlideWidth={520}
-        naturalSlideHeight={300}
-        hasMasterSpinner
-      >
-        <S.Container>
+      <S.CarouselContainer>
+        <CarouselProvider
+          visibleSlides={3}
+          totalSlides={4}
+          step={3}
+          naturalSlideWidth={500}
+          naturalSlideHeight={270}
+          hasMasterSpinner
+        >
           <Slider>
             <Slide index={0}>
               <ImageWithZoom src="https://wallpaperaccess.com/full/7485842.jpg"></ImageWithZoom>
@@ -38,26 +37,20 @@ const HomePage = () => {
             <Slide index={2}>
               <ImageWithZoom src="https://images.hdqwalls.com/wallpapers/lol-world-championship-2020-4k-b0.jpg"></ImageWithZoom>
             </Slide>
-
             <Slide index={3}>
               <ImageWithZoom src="https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_LeagueofLegends_RiotGames_S1_2560x1440-ee500721c06da3ec1e5535a88588c77f"></ImageWithZoom>
             </Slide>
           </Slider>
-        </S.Container>
-        <S.NextSlide>
-          <ButtonPlay> O </ButtonPlay>
-          <Dot slide={0}> O </Dot>
-          <Dot slide={1}> O </Dot>
-          <Dot slide={2}> O </Dot>
-          <Dot slide={3}> O </Dot>
-        </S.NextSlide>
-        <S.Tags> NEW SEASON STARTING SOON</S.Tags>
-        <S.Ranks
-          src={
-            "https://static.developer.riotgames.com/img/docs/lol/emblems_and_positions.png"
-          }
-        ></S.Ranks>
-      </CarouselProvider>
+          <S.NextSlide>
+            <ButtonPlay> O </ButtonPlay>
+            <Dot slide={0}> O </Dot>
+            <Dot slide={1}> O </Dot>
+            <Dot slide={2}> O </Dot>
+            <Dot slide={3}> O </Dot>
+          </S.NextSlide>
+        </CarouselProvider>
+      </S.CarouselContainer>
+      <S.BottomPage></S.BottomPage>
     </S.Container>
   );
 };
