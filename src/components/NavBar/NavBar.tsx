@@ -14,13 +14,13 @@ const NavigationBar = () => {
             <S.NavbarLink to={"/"}>Home</S.NavbarLink>
             <S.NavbarLink to={"/Champions"}>Champions</S.NavbarLink>
             <S.NavbarLink to={"/News"}>News</S.NavbarLink>
-            <S.NavbarLink to={"/News"}>Patch Notes</S.NavbarLink>
+            <S.NavbarLink to={"/Patch-Notes"}>Patch Notes</S.NavbarLink>
             <S.OpenLinksButton
               onClick={() => {
                 setExtendedNavBar((curr) => !curr);
               }}
             >
-              {extendedNavBar ? <>&#10005;</> : <>&#8801;</>}
+              {extendedNavBar ? <>&#8801;</> : <>&#8801;</>}
             </S.OpenLinksButton>
           </S.NavBarLinkContainer>
         </S.LeftContainer>
@@ -34,9 +34,13 @@ const NavigationBar = () => {
       </S.NavBarInnerContainer>
       {extendedNavBar && (
         <S.NavbarExtension>
-          <S.NavbarLinkExtended to={"/"}>Home</S.NavbarLinkExtended>
-          <S.NavbarLinkExtended to={"/Champions"}>
-            Champions
+          <S.NavbarLinkExtended to={"/Esports"}>Esports</S.NavbarLinkExtended>
+          <S.NavbarLinkExtended to={"/Patch-Notes"}>
+            Universe
+          </S.NavbarLinkExtended>
+          <S.NavbarLinkExtended to={"/Patch-Notes"}>Merch</S.NavbarLinkExtended>
+          <S.NavbarLinkExtended to={"/Patch-Notes"}>
+            Support
           </S.NavbarLinkExtended>
         </S.NavbarExtension>
       )}

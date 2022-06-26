@@ -4,14 +4,10 @@ import * as T from "./NavBar.types";
 
 export const NavBarContainer = styled.nav<T.NBar>`
   width: 100%;
-  height: ${(props) => (props.extendNavBar ? "100vh" : "80px")};
+
   background-color: black;
   display: flex;
   flex-direction: column;
-
-  @media (min-width: 700px) {
-    height: 80px;
-  }
 `;
 
 export const LeftContainer = styled.div`
@@ -76,21 +72,18 @@ export const OpenLinksButton = styled.button`
   background: none;
   border-style: none;
   border-radius: 8px;
+  margin-left: 8px;
+  margin-top: 2px;
   color: white;
   font-size: 45px;
+  display: flex;
+  flex-direction: row;
   cursor: pointer;
-
-  @media (min-width: 700px) {
-    display: none;
-  }
 `;
 
 export const NavbarExtension = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media (min-width: 700px) {
-    display: none;
-  }
+  height: 240px;
 `;

@@ -51,15 +51,18 @@ const ChampionInfo = () => {
         ...championStats,
         hp: championStats.hp + championStats.hpperlevel,
         mp: championStats.mp + championStats.mpperlevel,
-        armor: championStats.armor + championStats.armorperlevel,
+        armor: Math.round(championStats.armor + championStats.armorperlevel),
         spellblock: championStats.spellblock + championStats.spellblockperlevel,
         hpregen: championStats.hpregen + championStats.hpperlevel,
-        mpregen: championStats.mpregen + championStats.mpregenperlevel,
+        mpregen: Math.round(
+          championStats.mpregen + championStats.mpregenperlevel
+        ),
         crit: championStats.crit + championStats.critperlevel,
         attackdamage:
           championStats.attackdamage + championStats.attackdamageperlevel,
-        attackspeed:
-          championStats.attackspeed + championStats.attackspeedperlevel,
+        attackspeed: Math.floor(
+          championStats.attackspeed + championStats.attackspeedperlevel
+        ),
       });
     }
   };
@@ -68,18 +71,21 @@ const ChampionInfo = () => {
     if (championLevel > 1) {
       setChampionStats({
         ...championStats,
-        hp: championStats.hp - championStats.hpperlevel,
+        hp: Math.round(championStats.hp - championStats.hpperlevel),
         mp: championStats.mp - championStats.mpperlevel,
-        armor: championStats.armor - championStats.armorperlevel,
+        armor: Math.round(championStats.armor - championStats.armorperlevel),
         spellblock:
           championStats?.spellblock - championStats?.spellblockperlevel,
         hpregen: championStats?.hpregen - championStats?.hpperlevel,
-        mpregen: championStats?.mpregen - championStats?.mpregenperlevel,
+        mpregen: Math.round(
+          championStats?.mpregen - championStats?.mpregenperlevel
+        ),
         crit: championStats?.crit - championStats?.critperlevel,
         attackdamage:
           championStats?.attackdamage - championStats?.attackdamageperlevel,
-        attackspeed:
-          championStats?.attackspeed - championStats?.attackspeedperlevel,
+        attackspeed: Math.round(
+          championStats?.attackspeed - championStats?.attackspeedperlevel
+        ),
       });
       setChampionLevel(championLevel - 1);
     }
@@ -103,12 +109,12 @@ const ChampionInfo = () => {
             <div>MP : {championStats.mp}</div>
             <div>Move Speed : {championStats.movespeed}</div>
             <div>Armor :{championStats.armor}</div>
-            <div>Spell Block : {championStats.spellblock}</div>
+            <div>Spell Block : {Math.round(championStats.spellblock)}</div>
             <div>HP Regen : {championStats.hpregen}</div>
             <div>MP Regen : {championStats.mpregen}</div>
             <div>Crit : {championStats.crit}</div>
             <div>Attack Damage : {championStats.attackdamage}</div>
-            <div>Attack Speed : {championStats.attackspeed}</div>
+            <div>Attack Speed : {Math.round(championStats.attackspeed)}</div>
             <S.LevelUpDown onClick={onLevelDown}>LEVEL DOWN</S.LevelUpDown>
           </S.Stats>
         </S.Headlight>
